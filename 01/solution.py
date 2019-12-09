@@ -1,5 +1,4 @@
 from functools import lru_cache
-from math import log
 
 
 def read_input(filename):
