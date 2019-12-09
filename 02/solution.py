@@ -15,13 +15,12 @@ def _execute(ip, program):
     if program[ip] == OPCODE_ADD:
         program[program[ip + 3]] = program[program[ip + 1]] + program[program[ip + 2]]
         return ip + 4
-    elif program[ip] == OPCODE_MULTIPLY:
+    if program[ip] == OPCODE_MULTIPLY:
         program[program[ip + 3]] = program[program[ip + 1]] * program[program[ip + 2]]
         return ip + 4
-    elif program[ip] == OPCODE_HALT:
+    if program[ip] == OPCODE_HALT:
         return ip
-    else:
-        raise Exception(f'Unknown opcode {program[ip]} at position {ip}')
+    raise Exception(f'Unknown opcode {program[ip]} at position {ip}')
 
 
 def test_solution1():
