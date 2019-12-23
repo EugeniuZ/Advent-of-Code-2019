@@ -7,6 +7,7 @@ disable=missing-module-docstring,
         missing-class-docstring,
         missing-function-docstring,
         misplaced-comparison-constant,
+        bad-continuation,  # disabled until fixed in pylint
 
 [REFACTORING]
 max-nested-blocks=5
